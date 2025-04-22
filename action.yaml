@@ -1,0 +1,18 @@
+name: "Podcast Generator"
+author: "Hector Tregoning"
+description: "Generate a feed for a podcast of a YAML file."
+runs: 
+  using: "docker"
+  image: "Dockerfile"
+branding: 
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email: 
+    description: The commiters email address
+    required: true
+    desfault: ${{github.actor}}@localhost
+  name: 
+    description: The commiters name
+    required: true
+    default: ${{github.actor}}
